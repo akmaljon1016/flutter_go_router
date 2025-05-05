@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:label="flutter_go_router">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:windowSoftInputMode="adjustResize">
+
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="true" />
+
+            <!-- Deep linking intent filter -->
+            <intent-filter android:autoVerify="true">
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Both schemes need to specify the host -->
+                <data
+                    android:host="flutter_go_router.com"
+                    android:scheme="http" /> <!--flutter_go_router.com -->
+                <data
+                    android:host="flutterdev.uz"
+                    android:scheme="http"
+                    />
+<!--                <data-->
+<!--                    android:host="etalon-5b2b1-flowlinks.web.app"-->
+<!--                    android:pathPattern="/referral=.*"-->
+<!--                    android:scheme="https" />-->
+<!--                <data-->
+<!--                    android:scheme="https"-->
+<!--                    android:host="phclinic.onelink.me"-->
+<!--                    android:pathPrefix="/SSVN" />-->
+
+                <!-- You can optionally add path prefixes if needed -->
+                <!-- <data android:pathPrefix="/article" /> -->
+            </intent-filter>
+
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <!-- Launcher intent filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+</manifest>

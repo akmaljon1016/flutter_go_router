@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.flutter_go_router",
+    "sha256_cert_fingerprints": ["70:07:43:0A:C9:6A:63:D8:28:4A:AF:63:EB:1D:B5:41:6A:96:CA:AE:EB:F0:DB:B7:81:B9:C0:B2:81:17:10:08"]
+  }
+}]
